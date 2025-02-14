@@ -142,6 +142,12 @@ header img {
     align-items: center;
     margin: 30px 0;
     font-weight: 900;
+    align-items: baseline;
+}
+.btn-filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 .filtres button {
     border-radius: 20px;
@@ -186,22 +192,25 @@ header img {
     width: 30%;
 }
 .card-hebergement {
-    height: 207px;
+    height: auto;
 }
 .card-hebergement img {
     width: 100%;
-    height: 60%;
+    height: 124px;
     border-radius: 15px 15px 0 0;
 }
-.card-hebergement-title {
-    
-}
+
 .card .card-hebergement-content {
    height: 40%;
+   margin: 5px;
 }
-.card-hebergement-txt h3, .card-hebergement-txt p, .card-rating {
-    margin: 5px;
-
+.card-hebergement-txt h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+.card-hebergement-txt p {
+    font-size: 14px;
+    margin: 0 0 5px;
 }
 .afficher-plus {
     font-size: 18px;
@@ -260,6 +269,10 @@ header img {
 }
 
 /*Activités*/
+
+.activites-cards a {
+    width: 30%;
+}
 .activites-cards {
     display: flex;
     gap: 30px;
@@ -276,7 +289,7 @@ header img {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     border-radius: 20px 19px 20px 19px;
     height: 439px;
-    width: 297px;
+    width: 100%;
 }
 .activites-card p {
     padding: 10px;
@@ -319,7 +332,7 @@ footer ul li {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-
+   
     .main-container {
         padding: 0;
     }
@@ -369,6 +382,21 @@ footer ul li {
         height: 80%;
     }
 
+}
+@media (min-width:768px) and  (max-width: 1024px){
+    header {
+        width: 95%;
+        margin: 0 20px 20px ;
+    }
+    .Info, .recherche{
+        margin: 0 20px;
+    }
+    .filtres{
+        margin: 30px 20px;
+    }
+    .infobar{
+        margin: 0 0 20px 20px;
+    }
 }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -441,11 +469,16 @@ footer ul li {
         font-size: 18px;
         font-weight: 700;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 15px;
+    }
+    .btn-filters {
+        display: flex;
+        flex-wrap: wrap;
     }
     .filtres button {
         padding: 10px;
+        width: 45%;
     }
     /*Infobar*/
     .infobar {
@@ -490,6 +523,9 @@ footer ul li {
     }
     .activites-card {
         height: 200px;
+    }
+    .eglise {
+        object-position: top;
     }
 
     /*footer*/
